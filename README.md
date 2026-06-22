@@ -75,3 +75,4 @@ Portofolio/
 - ✅ Projects CRUD + upload gambar
 - ✅ Certificates CRUD + upload gambar
 - ✅ Job Tracker (Kanban + Tabel view)
+<img width="1918" height="930" alt="image" src="https://github.com/user-attachments/assets/f3f9b26b-a513-4190-8ba5-f250d21c9697" />
