@@ -44,6 +44,17 @@ git add .
 git commit -m "Initial commit: Setup project portofolio"
 ```
 
+> [!TIP]
+> **Mengatasi Error "Author identity unknown" saat Commit:**
+>
+> Jika Anda menemui error ini, itu karena Git belum mengetahui identitas Anda. Jalankan dua perintah berikut di terminal (ganti dengan email dan nama GitHub Anda):
+> ```bash
+> git config --global user.email "email-anda@example.com"
+> git config --global user.name "Nama Anda"
+> ```
+> Setelah itu, silakan jalankan kembali perintah `git commit -m "Initial commit: Setup project portofolio"`.
+
+
 ### Langkah 4: Membuat Repositori di GitHub
 1. Buka browser dan masuk ke akun [GitHub](https://github.com).
 2. Klik tombol **New** (atau klik ikon **+** di pojok kanan atas -> **New repository**).
