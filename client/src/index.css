@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111111;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #a3e635;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #84cc16;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-dark-100 font-semibold px-6 py-3 rounded-full hover:bg-primary-500 transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply border border-dark-400 text-white font-semibold px-6 py-3 rounded-full hover:border-primary hover:text-primary transition-all duration-300;
+  }
+
+  .btn-ghost {
+    @apply text-gray-400 font-medium px-4 py-2 rounded-lg hover:text-primary hover:bg-dark-200 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-dark-200 border border-dark-400 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5;
+  }
+
+  .card-hover {
+    @apply card hover:-translate-y-1 cursor-pointer;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-white;
+  }
+
+  .section-subtitle {
+    @apply text-gray-400 text-base mt-2;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full border border-primary/20;
+  }
+
+  .badge-status-applied {
+    @apply bg-blue-500/10 text-blue-400 border-blue-500/20;
+  }
+
+  .badge-status-interviewing {
+    @apply bg-yellow-500/10 text-yellow-400 border-yellow-500/20;
+  }
+
+  .badge-status-offered {
+    @apply bg-green-500/10 text-green-400 border-green-500/20;
+  }
+
+  .badge-status-rejected {
+    @apply bg-red-500/10 text-red-400 border-red-500/20;
+  }
+
+  .input {
+    @apply w-full bg-dark-300 border border-dark-400 text-white rounded-xl px-4 py-3 text-sm placeholder-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-300 mb-1.5;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10;
+  }
+
+  .section-tag {
+    @apply inline-flex items-center gap-2 text-primary text-sm font-semibold uppercase tracking-wider mb-3;
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px rgba(163, 230, 53, 0.3), 0 0 60px rgba(163, 230, 53, 0.1);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary-300 bg-clip-text text-transparent;
+  }
+
+  .nav-link {
+    @apply text-gray-400 hover:text-white transition-colors duration-200 text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  .grid-bg {
+    background-image: linear-gradient(rgba(163, 230, 53, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(163, 230, 53, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .hero-glow {
+    background: radial-gradient(ellipse at 70% 50%, rgba(163, 230, 53, 0.08) 0%, transparent 60%);
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
+
+/* Quill Rich Text Editor Dark Mode Styling */
+.quill-wrapper .ql-toolbar.ql-snow {
+  background-color: #111111;
+  border-color: #222222;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.quill-wrapper .ql-toolbar .ql-stroke {
+  stroke: #cccccc;
+}
+
+.quill-wrapper .ql-toolbar .ql-fill {
+  fill: #cccccc;
+}
+
+.quill-wrapper .ql-toolbar .ql-picker {
+  color: #cccccc;
+}
+
+.quill-wrapper .ql-container.ql-snow {
+  border-color: #222222;
+  background-color: #171717;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.875rem;
+}
+
+.quill-wrapper .ql-editor {
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  color: #ffffff;
+}
+
+.quill-wrapper .ql-editor.ql-blank::before {
+  color: #666666;
+  font-style: normal;
+  left: 15px;
+}
+
+.quill-wrapper .ql-toolbar .ql-picker-options {
+  background-color: #171717;
+  border-color: #222222;
+}
+
+/* Medium-like rich text rendering styles */
+.project-rich-content {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #d1d5db; /* gray-300 */
+  line-height: 1.75;
+}
+
+.project-rich-content * {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+.project-rich-content h1, 
+.project-rich-content h2, 
+.project-rich-content h3 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-rich-content h1 { font-size: 1.5rem; }
+.project-rich-content h2 { font-size: 1.25rem; }
+.project-rich-content h3 { font-size: 1.125rem; }
+
+.project-rich-content p {
+  margin-bottom: 1.25rem;
+}
+
+.project-rich-content blockquote {
+  border-left: 4px solid #a3e635; /* primary lime-green */
+  padding-left: 1.25rem;
+  margin-left: 0;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+  color: #9ca3af;
+}
+
+.project-rich-content pre, 
+.project-rich-content code {
+  background-color: #1f2937;
+  color: #a3e635;
+  border-radius: 0.375rem;
+  font-family: monospace;
+}
+
+.project-rich-content pre {
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+  border: 1px solid #374151;
+}
+
+.project-rich-content code {
+  padding: 0.125rem 0.25rem;
+}
+
+.project-rich-content ul, 
+.project-rich-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  list-style-position: outside;
+}
+
+.project-rich-content ul {
+  list-style-type: disc;
+}
+
+.project-rich-content ol {
+  list-style-type: decimal;
+}
+
+.project-rich-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
